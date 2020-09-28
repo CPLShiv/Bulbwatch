@@ -31,7 +31,7 @@ async def send_image():
 # EVENTS
 @bot.event
 async def on_ready():
-    send_image.start()
+    #send_image.start()
     print('Logged in as', bot.user)
 
 
@@ -80,6 +80,7 @@ async def removechannel(ctx):
     channel_id = channel.id
 
     db = Database()
+    db.remove_channel(channel_id)
     db.close()
 
     await channel.send('<#{}> removed from the send list!'.format(channel_id))
