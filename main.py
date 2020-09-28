@@ -31,7 +31,7 @@ async def send_image():
 # EVENTS
 @bot.event
 async def on_ready():
-    #send_image.start()
+    send_image.start()
     print('Logged in as', bot.user)
 
 
