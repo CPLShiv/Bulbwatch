@@ -209,7 +209,7 @@ async def subscribe(ctx, channel=None):
         elif rows == 1:
             await sending.edit(content='Added <#{}> as this server\'s Bulbwatch channel!'.format(channel_id))
         elif rows == 2:
-            await sending.edit(content='<#{}> is the new Bulbwatch channel for this server!')
+            await sending.edit(content='<#{}> is the new Bulbwatch channel for this server!'.format(channel_id))
 
 
 @bot.command(aliases=['unsub'])
